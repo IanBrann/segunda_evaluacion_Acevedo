@@ -220,7 +220,7 @@ Es la red social con mayor crecimiento, y ha logrando duplicar su actividad en s
             lat = georeferencias[x].coordenadas[0];
             lon = georeferencias[x].coordenadas[1];
             circle = L.circle([lat, lon], {
-                fillColor: '#000',
+                fillColor: '#330066',
                 fillOpacity: 0.5,
                 weight: 0,
                 radius: 700000
@@ -250,23 +250,23 @@ Es la red social con mayor crecimiento, y ha logrando duplicar su actividad en s
         {Pais:"Estados Unidos", porcentaje:36}
         ];
 
-        var coso = d3.select("#chart-1").attr("width", "100%").attr("height", "420").style("background", "#4710a2");
+        var coso = d3.select("#chart-1").attr("width", "100%").attr("height", "420").style("background", "#333333");
 
-        coso.selectAll("rect").data(Paises).enter().append("rect").attr("x",40).attr("y", function(d, i) { return (i + 1) * 40; }).attr("width", function(d) { return d.porcentaje*8 }).attr("height",30).attr("fill","#c8bed2")
+        coso.selectAll("rect").data(Paises).enter().append("rect").attr("x",40).attr("y", function(d, i) { return (i + 1) * 40; }).attr("width", function(d) { return d.porcentaje*8 }).attr("height",30).attr("fill","#FF8C00")
 
          coso.selectAll("text").data(Paises).enter().append("text").text(function(d) {return (d.Pais + " (" + d.porcentaje + " %)")}).attr("text-anchor", "start").attr("x", function(d, i) { return (d.porcentaje*8)+50 }).attr("y", function(d, i) { return ((i + 1) * 40)+20 }).attr("font-family", "sans-serif").attr("font-size", "12px").attr("fill", "white"); 
 
     </script>
 <script>
 var data = [
-      {paises: 'MÉXICO', millones: 14, color:"#ca3b38"},
-      {paises: 'ARGENTINA', millones: 11, color:"#bb94c3"},
-      {paises: 'COLOMBIA', millones: 9.2, color:"#4710a2"},
-      {paises: 'VENEZUELA', millones: 5.2, color:"#39225f"},
-      {paises: 'CHILE', millones: 4.8, color:"#591d16"},
+      {paises: 'MÉXICO', millones: 14, color:"#FF8C00"},
+      {paises: 'ARGENTINA', millones: 11, color:"#FF8C00"},
+      {paises: 'COLOMBIA', millones: 9.2, color:"#FF8C00"},
+      {paises: 'VENEZUELA', millones: 5.2, color:"#FF8C00"},
+      {paises: 'CHILE', millones: 4.8, color:"#FF8C00"},
 
     ]    
-    var esto = d3.select("#chart-2").attr("width", "100%").attr("height", "400").style("background", "#cbc8db");
+    var esto = d3.select("#chart-2").attr("width", "100%").attr("height", "400").style("background", "#333333");
     var g = esto.selectAll("g")
       .data(data)
       .enter()
